@@ -1,0 +1,40 @@
+ 		<!-- <table>
+ 			<thead>
+ 				<tr>
+ 					<th>s.no</th>
+ 					<th>Name</th>
+ 					<th>age</th>
+ 					<th>mail</th> 			
+ 					<th>Degree</th>		
+ 				</tr>
+ 			</thead>
+ 			<tbody> -->
+ 				<ul ng-repeat="person in persons">
+ 					<li>
+ 						{{$index+1}}
+ 					</li>
+ 					<li>
+ 						{{person.name}}
+ 					</li>
+ 					<li>
+ 						{{person.age}}
+ 					</li>
+ 					<li>
+ 						{{person.mail}}
+ 					</li>
+ 					<li>
+ 					
+ 						<ul ng-repeat="degree in person.degree">
+ 							<li>
+ 								{{$parent.$index+1}}
+ 								{{$index+1}}
+ 							</li>
+ 							<li>
+ 								{{degree.ug}}
+ 		 						{{degree.pg}}
+ 							</li>
+ 						</ul>
+ 					</li>	
+ 				</ul>
+<!--  			</tbody>
+ 		</table> -->

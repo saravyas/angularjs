@@ -1,0 +1,21 @@
+<html ng-app = "saraApp">
+<head>
+	<script type="text/javascript" src="../angular.min.js"></script>
+	<script type="text/javascript" src="./controller.js"></script>	
+</head>
+<body>
+ 	<div ng-controller = "saraCtrl">
+ 		<select ng-model="data">
+ 			<option value="tabledata.html">table</option>
+ 			<option value="listdata.html">list</option>
+ 		</select>
+ 		<div ng-include = "data" ></div>
+  	</div> 		
+<body>
+<style type="text/css">
+	table td {
+  border: 1px solid black;
+    padding: 5px;
+}
+</style>
+</html>
