@@ -1,0 +1,55 @@
+<html ng-app = "saraApp">
+<head>
+	<script type="text/javascript" src="../angular.min.js"></script>
+	<script type="text/javascript" src="./controller.js"></script>	
+</head>
+<body>
+ 	<div ng-controller = "saraCtrl">
+ 		<label>Rows to display</label><input type="number" name="number" ng-model="row" min="0" max="5" step="1">
+ 		<table>
+ 			<thead>
+ 				<tr>
+ 					<th>Name</th>
+ 					<th>Age</th>
+ 					<th>Dob</th>
+ 					<th>Mail</th>
+ 					<th>Gender</th>
+ 					<th>Salary(Number)</th>
+ 					<th>Salary(Currency)</th> 					
+ 				</tr>
+ 			</thead>
+ 			<tbody>
+ 				<tr ng-repeat="person in persons | limitTo:row">
+ 					<td>
+ 						{{person.name | uppercase}}
+ 					</td>
+ 					<td>
+ 						{{person.age}}
+ 					</td> 		
+ 					<td>
+ 						{{person.dob | date:"dd/MM/yyyy"}}
+ 					</td>			
+ 					<td>
+ 						{{person.mail}}
+ 					</td>
+ 					<td>
+ 						{{person.gender| lowercase}}
+ 					</td>
+ 					<td>
+ 						{{person.salary | number:2}}
+ 					</td>
+ 					<td>
+ 						{{person.salary |currency: "$" :2}}
+ 					</td>
+ 				</tr>
+ 			</tbody>
+ 		</table>
+ 	</div> 		
+<body>
+<style type="text/css">
+	table td {
+  border: 1px solid black;
+    padding: 5px;
+}
+</style>
+</html>
