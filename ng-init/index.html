@@ -1,0 +1,52 @@
+ <html ng-app>
+<head>
+	<script type="text/javascript" src="../angular.min.js"></script>
+	<!-- <script type="text/javascript" src="./controller.js"></script>	 -->
+</head>
+<body>
+  		<table  ng-init="persons=[{
+		name : 'sara',
+		age : 21,
+		mail : 'saravyas007@gmail.com'
+	},{
+		name : 'vyas',
+		age : 18,
+		mail : 'vyas007@gmail.com' 
+	},{
+		name : 'gomal',
+		age : 17,
+		mail : 'gomalvyas007@gmail.com' 
+	}]">
+ 			<thead>
+ 				<tr>
+ 					<th>s.no</th>
+ 					<th>Name</th>
+ 					<th>age</th>
+ 					<th>mail</th> 					
+ 				</tr>
+ 			</thead>
+ 			<tbody>
+ 				<tr data-ng-repeat="person in persons">
+ 					<td>
+ 						{{$index+1}}
+ 					</td>
+ 					<td>
+ 						{{person.name}}
+ 					</td>
+ 					<td>
+ 						{{person.age}}
+ 					</td>
+ 					<td>
+ 						{{person.mail}}
+ 					</td>
+  				</tr>
+ 			</tbody>
+ 		</table>	
+<body>
+<style type="text/css">
+	table td {
+  border: 1px solid black;
+    padding: 5px;
+}
+</style>
+</html>
