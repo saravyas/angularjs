@@ -1,0 +1,60 @@
+<html ng-app = "saraApp">
+<head>
+	<script type="text/javascript" src="../angular.min.js"></script>
+	<script type="text/javascript" src="./controller.js"></script>	
+</head>
+<body>
+ 	<div ng-controller = "saraCtrl">
+ 		
+ 		<table>
+ 			<thead>
+ 				<tr>
+ 					<th>s.no</th>
+ 					<th>Name</th>
+ 					<th>age</th>
+ 					<th>mail</th>
+ 					<th>Likes</th>
+ 					<th>Dislikes</th> 			
+ 					<th>Likes/Dislikes</th>
+ 					<th>Hover count</th>
+ 				</tr>
+ 			</thead>
+ 			<tbody>
+ 				<tr ng-repeat="person in persons">
+ 					<td>
+ 						{{$index+1}}
+ 					</td>
+ 					<td>
+ 						{{person.name}}
+ 					</td>
+ 					<td>
+ 						{{person.age}}
+ 					</td>
+ 					<td>
+ 						{{person.mail}}
+ 					</td>
+ 					<td>
+ 						{{person.likes}}
+ 					</td>
+ 					<td>
+ 						{{person.dislikes}}
+ 					</td> 					
+ 					<td>
+ 						<input type="button" name="like" ng-click="incrementlike(person)" value="likes">
+ 						<input type="button" name="dislike" ng-click="decrementlike(person)" value="dislikes"> 						
+  					</td>
+  					<td ng-mousemove="over = over + 1">Mouse Over Me The Count! 
+  						{{over}}
+  					</td>
+ 				</tr>
+ 			</tbody>
+ 		</table>
+  	</div> 		
+<body>
+<style type="text/css">
+	table td {
+   		border: 1px solid black;
+    	padding: 5px;
+}
+</style>
+</html>
