@@ -1,0 +1,47 @@
+<html ng-app = "saraApp">
+<head>
+	<script type="text/javascript" src="../angular.min.js"></script>
+	<script type="text/javascript" src="./controller.js"></script>	
+</head>
+<body>
+ 	<div ng-controller = "saraCtrl">
+ 		
+ 		<table>
+ 			<thead>
+ 				<tr>
+ 					<th>s.no</th>
+ 					<th>UserId</th>
+ 					<th>Id</th>
+ 					<th>Title</th> 			
+ 					<th>Body</th>		
+ 				</tr>
+ 			</thead>
+ 			<tbody>
+ 				<tr ng-repeat="person in persons">
+ 					<td>
+ 						{{$index+1}}
+ 					</td>
+ 					<td>
+ 						{{person.userId}}
+ 					</td>
+ 					<td>
+ 						{{person.id}}
+ 					</td>
+ 					<td>
+ 						{{person.title}}
+ 					</td>
+ 					<td>
+ 						{{person.body}}
+ 					</td>
+ 				</tr>
+ 			</tbody>
+ 		</table>
+  	</div> 		
+<body>
+<style type="text/css">
+	table td {
+  border: 1px solid black;
+    padding: 5px;
+}
+</style>
+</html>
