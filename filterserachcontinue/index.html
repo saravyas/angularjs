@@ -1,0 +1,51 @@
+<html ng-app = "saraApp">
+<head>
+	<script type="text/javascript" src="../angular.min.js"></script>
+	<script type="text/javascript" src="./controller.js"></script>	
+</head>
+<body>
+ 	<div ng-controller = "saraCtrl">
+ 		<div>
+      <input type="text" name="searchname" placeholder="search Name" ng-model="search.name"> 
+      <input type="text" name="searchage" placeholder="search Age" ng-model="search.age">
+      <input type="checkbox" name="exact" ng-model="exact">
+    </div>
+ 		<table>
+ 			<thead>
+ 				<tr>
+ 					<th>s.no</th>
+ 					<th>Name</th>
+ 					<th>age</th>
+ 					<th>mail</th>
+ 				</tr>
+ 			</thead>
+ 			<tbody>
+ 				<tr ng-repeat="person in persons | filter : search :exact">
+ 					<td>
+ 						{{$index+1}}
+ 					</td>
+ 					<td>
+ 						{{person.name}}
+ 					</td>
+ 					<td>
+ 						{{person.age}}
+ 					</td>
+ 					<td>
+ 						{{person.mail}}
+ 					</td>
+ 				</tr>
+ 			</tbody>
+ 		</table>
+  	</div> 		
+<body>
+<style type="text/css">
+	table{
+    border-collapse: collapse;
+  }
+   td ,th{
+   		border: 1px solid black;
+    	padding: 5px;
+  }
+}
+</style>
+</html>
