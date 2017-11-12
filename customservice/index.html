@@ -1,0 +1,32 @@
+<html ng-app = "saraApp">
+<head>
+	<script type="text/javascript" src="../angular.min.js"></script>
+	<script type="text/javascript" src="./controller.js"></script>
+	<script type="text/javascript" src=./service.js></script>	
+</head>
+<body>
+ 	<div ng-controller = "saraCtrl">
+ 		
+ 		<table>
+ 			<tr>
+				<td>your string</td>
+				<td><input type="text" name="name" ng-model="oldname"> </td>
+ 			</tr>
+ 			<tr>
+				<td>your  New string</td>
+				<td><input type="text" name="name" ng-model="output"> </td>
+ 			</tr> 			
+ 			<tr>
+				<td>Processed Data</td>
+				<td><input type="button" name="name" value="processed_data" ng-click="transformStr(oldname)"> </td>
+ 			</tr> 			
+  		</table>
+  	</div> 		
+<body>
+<style type="text/css">
+	table td {
+  border: 1px solid black;
+    padding: 5px;
+}
+</style>
+</html>
