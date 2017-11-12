@@ -12,7 +12,8 @@
  					<th>s.no</th>
  					<th>Name</th>
  					<th>age</th>
- 					<th>mail</th> 					
+ 					<th>mail</th> 			
+ 					<th>Degree</th>		
  				</tr>
  			</thead>
  			<tbody>
@@ -29,9 +30,29 @@
  					<td>
  						{{person.mail}}
  					</td>
-  				</tr>
+ 					<td>
+ 					<table>	
+ 						<tr ng-repeat="degree in person.degree">
+ 							<td>
+ 								{{$parent.$index+1}}
+ 								{{$index+1}}
+ 							</td>
+ 							<td>
+ 								{{degree.ug}}
+ 		 						{{degree.pg}}
+ 							</td>
+ 						</tr>
+ 					</table>	
+ 					</td>
+ 				</tr>
  			</tbody>
  		</table>
   	</div> 		
 <body>
+<style type="text/css">
+	table td {
+  border: 1px solid black;
+    padding: 5px;
+}
+</style>
 </html>
